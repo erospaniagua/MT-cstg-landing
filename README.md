@@ -33,7 +33,7 @@ without login**, at the domain listed on the OAuth consent screen.
 
 | What | Where |
 |---|---|
-| Login / signup URL | `https://app.cantstopthegrowth.com` — 3 `<a href>` in `index.html` |
+| Login / signup URL | `https://app.cstgtraining.com/login` — 3 `<a href>` in `index.html` |
 | Support email | `danny@cantstopthegrowth.com` — footer + "Talk to us" CTA |
 | Address, © year | footer `.foot-bottom` |
 | Nav anchors | `#platform`, `#calendar` + `privacy.html`, `terms.html` |
