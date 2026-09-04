@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/survey/:token",
+      "destination": "https://st.cstgtraining.com/survey/:token",
+      "permanent": true
+    }
+  ]
+}
