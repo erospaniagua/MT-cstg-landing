@@ -1,107 +1,94 @@
-# Can't Stop The Growth — landing page implementation package
+# The CSTG Growth Engine — landing + legal pages
 
-Static, framework-free. Four HTML files, two stylesheets, no build step, no dependencies
-except Google Fonts (Inter) over CDN.
+Static, framework-free. Deploy the folder at the site root (Vercel serves `main` at
+www.cstgtraining.com). No build step, no dependencies, no analytics, nothing that sets a
+cookie. Only external request: Google Fonts (Archivo + Inter).
 
-```
-cstg-landing-package/
-├── index.html      — the landing page (was site/landing.html)
-├── landing.css     — landing page styles (the only CSS index.html needs)
-├── privacy.html    — existing legal page
-├── terms.html      — existing legal page
-└── site.css        — styles for privacy.html + terms.html only
-```
+## Files
 
-Deploy: upload the folder to any static host (S3+CloudFront, Netlify, Vercel, Nginx,
-GitHub Pages). No server-side anything. `index.html` must be reachable **publicly,
-without login**, at the domain listed on the OAuth consent screen.
-
-## Requirements checklist (Google / Microsoft review)
-
-- App name renders exactly as **Can't Stop The Growth** in the header, hero `<h1>`,
-  `<title>` and footer. It must match the OAuth consent screen string character for
-  character — if the consent screen says something else, change it here, not there.
-- The calendar section (`#calendar`) is the reviewed feature: what is synced, the
-  3-step consent flow, and the "What calendar access is used for" transparency box.
-  Do not remove or collapse it behind an interaction — reviewers must see it on load.
-- Footer links to Privacy Policy and Terms of Service resolve to same-origin pages.
-- Support email `danny@cantstopthegrowth.com` appears in the footer and closing CTA.
-- Before submitting: publish the same links your OAuth application record uses
-  (homepage, privacy policy URL, terms URL) and confirm each returns 200 anonymously.
-
-## Configuration points
-
-| What | Where |
+| File | Purpose |
 |---|---|
-| Login / signup URL | `https://app.cstgtraining.com/login` — 3 `<a href>` in `index.html` |
-| Legacy (ST) app link — TEMPORARY | `https://st.cstgtraining.com/` — the "Legacy app" ghost button next to "Get started" in the header nav; remove once the old app's users have moved |
-| Support email | `danny@cantstopthegrowth.com` — footer + "Talk to us" CTA |
-| Address, © year | footer `.foot-bottom` |
-| Nav anchors | `#platform`, `#calendar` + `privacy.html`, `terms.html` |
+| `index.html` | the landing page — one H1, copy from the approved concept |
+| `landing.css` | tokens, layout, motion, the three animated vignettes |
+| `motion.js` | IntersectionObserver reveals, one-shot sequences, counters, mobile menu (no storage) |
+| `privacy.html`, `terms.html` | legal pages on the same shell; the copy is the approved text, do not rewrite it |
+| `legal.css` | legal template only; load **after** `landing.css` |
+| `assets/` | brand images (see below) |
+| `.well-known/microsoft-identity-association.json` | Azure publisher-domain verification |
+| `docs/` | the Claude Design brief this page was built from |
 
-## Design tokens (`landing.css` `:root`)
+Install order in `<head>`: fonts → `landing.css` → `legal.css` (legal pages only).
+`motion.js` loads last, before `</body>`.
 
-- Type: **Inter** 400/500/600/700/800. Headings `font-weight:700`, `letter-spacing:-.025em`
-  (hero `-.04em`). Body 15px / 1.65.
-- Neutrals: white base, `--s900:#0f172a` headings, `--s500:#64748b` body,
-  `--s200:#e2e8f0` borders. Cards `--r-lg:16px`, `--shadow-sm` / `--shadow-lg`.
-- Primary: `--blue:#2563eb`, hover `#1d4ed8`.
-- Category accents (chips, dots, calendar events only — never large fills):
-  `--service` `hsl(158,84%,34%)` · `--sales` `hsl(32,95%,44%)` ·
-  `--leadership` `hsl(251,60%,58%)` · `--office` `hsl(211,25%,42%)` ·
-  `--install` `hsl(357,60%,49%)`.
-- Status pills: `.pillstat.ok` emerald "Syncing", `.pillstat.warn` amber "Needs reconnect".
-- Icons: inline lucide-style line SVGs, class `.i` (18px, `stroke-width:1.6`,
-  `stroke:currentColor`). Swap for the real lucide sprite if the app already ships one.
+## Brand assets (`assets/`)
 
-## JavaScript (one inline IIFE at the bottom of `index.html`, ~10 lines)
+Generated with ImageMagick from the two originals in `assets/source/` (never served):
 
-1. Mobile nav toggle (`#navToggle` → `.nav.open`, sets `aria-expanded`, closes on link tap).
-2. `.head.stuck` border/shadow once `scrollY > 8`.
-3. `IntersectionObserver` adds `.in` to every `.reveal` element once, at 15% visibility.
+| File | Used for |
+|---|---|
+| `cstg-logo-white.png` (264×84, 3× of the 38px header height) | header and footer wordmark, `alt="Can't Stop The Growth"` |
+| `cstg-arrow.png` (900px) | hero watermark (7% opacity, fades in on load), vignette window icon |
+| `cstg-arrow-white.png` (720px) | watermark in the crimson final CTA |
+| `favicon.ico` (48/32/16), `apple-touch-icon.png` (180, ink background) | browser and home-screen icons |
+| `og-image.png` (1200×630) | link previews (`og:image`, Twitter summary_large_image) |
 
-All motion is CSS. `.reveal` drives the section fade-up (stagger via inline
-`--rd`), the hero progress bars (`--w` widths), and the calendar events dropping in
-(stagger via inline `--d`). Everything is disabled under
-`@media (prefers-reduced-motion: reduce)`. No JS = page still fully readable except the
-reveal classes never fire — if you need a hard no-JS guarantee, add
-`<noscript><style>.reveal{opacity:1;transform:none}</style></noscript>` to `<head>`.
+To regenerate after a logo change, re-run the `magick` commands in the git history of the
+commit that added them (`-trim +repage` first, then resize).
 
-## Responsive
+## Timing knobs
 
-- ≤960px: hero and calendar sections stack to one column; feature grid → 2 columns;
-  the mock calendar stops being sticky.
-- ≤720px: nav collapses to the toggle; feature grid → 1 column; mock calendar drops
-  Thursday/Friday columns (`.cal-grid .hd:nth-child(n+5)`), stats → 2 columns.
+CSS custom properties on `:root` in `landing.css`:
 
-## Accessibility notes
+```css
+--m-dur: 600ms;    /* section enter duration */
+--m-stagger: 70ms; /* default child stagger */
+--m-ease: cubic-bezier(.16,.72,.3,1);
+```
 
-- Nav toggle carries `aria-expanded` / `aria-controls`; decorative SVGs are unlabeled
-  inline and non-focusable.
-- Body text is `--s500` on white (7.0:1); the `.eyebrow` blue on white is 5.9:1.
-  Keep `--s400` for supporting metadata only, never body copy.
-- Add `:focus-visible` outlines if your app's global stylesheet does not already
-  provide them — this file relies on the browser default.
+Per-block overrides in markup:
 
-## Known gaps / decisions for you
+- `data-motion` — marks a content group; its direct children fade + rise on enter, and fade to .25 / scale .985 on leave in either direction.
+- `data-motion data-stagger="90"` — per-group stagger in ms (overrides `--m-stagger`).
+- `data-seq` — one-shot sequence: plays at ≥35% visibility, holds its final state, resets only after being fully out of view for 1s. Used on the hero `.ledger`, both `.res-row` counter groups and the three `.vig` screens.
+- `data-count="65"` on a number, with optional `data-delay`, `data-dur`, `data-group="1"` (thousands separators). Prefix/suffix are read from the element's own text, so the settled value is what ships in the HTML.
+- Vignette beat timing lives in CSS: each animated element carries `style="--d:1.7s"` (its own delay); the fixed beats (tab cut 3.9s, warning dot 4.9s, save 5.3s; V2 panel 2.7s; V3 prescription 3.1s) are literal delays in the `.v1.play` / `.v2.play` / `.v3.play` rules near the end of `landing.css`.
 
-- **Style split.** `index.html` is the new light SaaS system; `privacy.html` and
-  `terms.html` still use the original navy CSTG brand (`site.css`). They work and link
-  correctly, but a reviewer sees two visual languages. Say the word and the legal pages
-  get restyled onto `landing.css`.
-- Legal copy: every `[BRACKET]` placeholder was resolved on 2026-09-04 except the registered
-  **entity type** (`[ENTITY TYPE — e.g. LLC]`, once per page). Defaults chosen that deserve a
-  legal read: Indiana law / Johnson County venue, no arbitration clause, 12-month liability cap,
-  30-day post-termination export window, no uptime commitment.
-- **Apex redirects to www.** Vercel answers `cstgtraining.com` with a 308 to
-  `www.cstgtraining.com`. Microsoft's publisher-domain check does not follow redirects, so
-  either set the publisher domain to `www.cstgtraining.com` or make the apex the primary
-  domain in Vercel. Use the `www` URLs in the Google consent-screen fields as well.
-- `.well-known/microsoft-identity-association.json` lists ONE application id; every Azure app
-  registration that names this publisher domain (production AND staging) must be in the array.
-- No analytics, cookie banner, or forms are included — nothing on this page sets a
-  cookie or collects data, which keeps the review surface small. Adding analytics means
-  updating the privacy policy's technical-data section.
-- Content in the mock dashboard and mock calendar is illustrative (names, percentages,
-  session titles). It is clearly product chrome, not claimed customer data — but if you
-  prefer, swap the names for generic role labels.
+## OAuth app-review checklist
+
+- [x] Product name **Can't Stop The Growth** verbatim: header/footer logo `alt`, the hero kicker (visible text) and the footer line.
+- [x] Platform name "The CSTG Growth Engine" used in `<title>` and meta description only.
+- [x] Page is public, no login required, and describes what the product does.
+- [x] **Calendar sync** section (`#calendar`) is visible on load — not collapsed, not tabbed — with the three-step connect flow and the "What calendar access is used for" transparency box. Header nav links to it.
+- [x] Footer links `privacy.html` and `terms.html` as same-origin relative links, plus a Support mailto.
+- [x] No analytics, no tag manager, no cookie banner, no cookies set. `motion.js` touches no storage.
+- [x] Legal pages keep the Google API Services User Data Policy limited-use statement and the Microsoft equivalent, styled as quote blocks.
+- [ ] Legal pages: fill in the registered entity type (`[ENTITY TYPE — e.g. LLC]`, once per page).
+- [ ] Vercel answers `cstgtraining.com` with a 308 to `www.cstgtraining.com`. Microsoft's publisher-domain check does not follow redirects: set the publisher domain to `www.cstgtraining.com` or make the apex primary. Use the `www` URLs in the Google consent screen too.
+- [ ] `.well-known/microsoft-identity-association.json` must list every Azure app registration that names this publisher domain (production AND staging).
+- [ ] Retire the **Legacy app** button once `st.cstgtraining.com` is switched off.
+
+## Temporary legacy-app button
+
+Two anchors per page, both marked `<!-- TEMPORARY -->`: one in `.nav-cta`, one in
+`#mobileMenu`. Delete the anchors; the `.btn-legacy` rule can stay or go.
+
+## Editing the legal copy
+
+Edit the `<article class="legal">` in `privacy.html` / `terms.html` directly. Every `<h2>`
+needs an `id`; the table of contents at the top of each page is a plain list of those ids —
+add or remove a line there when a section changes. Bump the `Effective …` date in the
+title band.
+
+## Checks before deploy
+
+1. **No JavaScript** — every section renders in its settled state, ledger rails filled,
+   counters at their final numbers, vignettes at their end frame.
+2. **Reduced motion** — OS "reduce motion": no counters, no cursors, no rail fills; final
+   states apply immediately.
+3. **Layout shift** — every vignette window has a fixed aspect ratio (16:10, 4:3 under
+   620px) and only `transform`/`opacity` animate; the two watermark images carry
+   width/height attributes.
+4. **Keyboard** — skip link, header CTAs, mobile toggle (Esc closes), nav anchors, all
+   buttons show a crimson (white on dark) focus ring.
+5. **Encoding** — files are UTF-8 with real `·`, `©`, `→`, `—` characters; if a deploy
+   pipeline mangles them, check the `Content-Type` charset header.

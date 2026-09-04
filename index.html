@@ -1,199 +1,500 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Can't Stop The Growth — training, coaching and KPI growth for home-service teams</title>
-<meta name="description" content="Can't Stop The Growth (CSTG) is the training platform for home-service trade companies — HVAC, plumbing and electrical. Role-based learning tracks, live coach-led events, skill progression, KPI tracking and optional Google/Outlook calendar sync." />
-<link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="landing.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The CSTG Growth Engine | Training, coaching and career mapping for home service teams</title>
+<meta name="description" content="The CSTG Growth Engine is the platform behind Can't Stop The Growth. Role based training tracks, live coach led classes, career maps by trade and tier, and training prescribed straight from your KPIs. Built for HVAC, plumbing and electrical companies.">
+<link rel="canonical" href="https://www.cstgtraining.com/">
+<meta name="theme-color" content="#111820">
+<link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Can't Stop The Growth">
+<meta property="og:title" content="The CSTG Growth Engine | Can't Stop The Growth">
+<meta property="og:description" content="Role based training tracks, live coach led classes, career maps by trade and tier, and training prescribed straight from your KPIs. Built for HVAC, plumbing and electrical companies.">
+<meta property="og:url" content="https://www.cstgtraining.com/">
+<meta property="og:image" content="https://www.cstgtraining.com/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="landing.css">
 </head>
 <body>
-<header class="head" id="head">
-<div class="wrap head-in">
-<a class="logo" href="#top"><span class="mark">C</span><b>Can't Stop The Growth</b></a>
-<button class="navtoggle" id="navToggle" aria-expanded="false" aria-controls="nav" aria-label="Menu"><svg class="i" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18" /></svg></button>
-<nav class="nav" id="nav">
-<a href="#platform">Platform</a>
+<a class="skip" href="#top">Skip to content</a>
+
+<header class="site-head">
+<div class="wrap nav">
+<a class="mark" href="#top"><img src="assets/cstg-logo-white.png" alt="Can't Stop The Growth" height="120"></a>
+<nav class="nav-links" aria-label="Sections">
+<a href="#platform">The platform</a>
+<a href="#paths">Career paths</a>
+<a href="#results">Results</a>
 <a href="#calendar">Calendar sync</a>
-<a href="privacy.html">Privacy</a>
-<a href="terms.html">Terms</a>
-<!-- TEMPORARY: users of the previous ST app still land on www.cstgtraining.com; remove once they have moved -->
-<a class="btn btn-ghost btn-sm" href="https://st.cstgtraining.com/" title="Sign in to the previous version of the app">Legacy app</a>
-<a class="btn btn-primary btn-sm" href="https://app.cstgtraining.com/login">Get started</a>
+<a href="#start">Get started</a>
 </nav>
+<div class="nav-cta">
+<!-- TEMPORARY: legacy app link for members still on the previous app. Remove this anchor (and its counterpart in #mobileMenu) when st.cstgtraining.com is retired. -->
+<a class="btn btn-ghost btn-sm btn-legacy" href="https://st.cstgtraining.com/">Legacy app</a>
+<a class="btn btn-ghost btn-sm" href="https://app.cstgtraining.com/login">Member login</a>
+<a class="btn btn-primary btn-sm" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3KIBhja7t2q7o0VAFUAdRraAuTdai4gCNXGuXQUDwFY0c7RBIhTDw6lv-2hqluCo27wOx4wcfD">Book a discovery call</a>
+</div>
+<button class="navtoggle" id="navToggle" aria-expanded="false" aria-controls="mobileMenu" aria-label="Menu"><span></span></button>
+<div class="mobile-menu" id="mobileMenu">
+<nav aria-label="Sections">
+<a href="#platform">The platform</a>
+<a href="#paths">Career paths</a>
+<a href="#results">Results</a>
+<a href="#calendar">Calendar sync</a>
+<a href="#start">Get started</a>
+</nav>
+<div class="mm-btns">
+<a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3KIBhja7t2q7o0VAFUAdRraAuTdai4gCNXGuXQUDwFY0c7RBIhTDw6lv-2hqluCo27wOx4wcfD">Book a discovery call</a>
+<a class="btn btn-ghost" href="https://app.cstgtraining.com/login">Member login</a>
+<!-- TEMPORARY -->
+<a class="btn btn-ghost btn-legacy" href="https://st.cstgtraining.com/">Legacy app</a>
+</div>
+</div>
 </div>
 </header>
 
-<main id="top">
-<section class="hero">
-<div class="wrap hero-in">
-<div class="reveal">
-<span class="pill"><span class="dot"></span> Built for HVAC, plumbing &amp; electrical</span>
-<h1>Can't Stop The Growth</h1>
-<p class="one">Training, coaching and KPI growth for home-service teams.</p>
-<p class="sub">CSTG turns technicians, CSRs and salespeople into top performers — a structured curriculum, live coach-led sessions, verified skills and the KPIs that prove it, all in one platform your whole company works from.</p>
-<div class="actions">
-<a class="btn btn-primary" href="https://app.cstgtraining.com/login">Get started<svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
-<a class="btn btn-ghost" href="#calendar">See how it works</a>
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+<img class="hero-mark" src="assets/cstg-arrow.png" alt="" aria-hidden="true" width="900" height="885">
+<div class="wrap hero-grid" data-motion data-stagger="110">
+<div>
+<p class="eyebrow">The platform behind Can't Stop The Growth</p>
+<h1>Your $100 million L&amp;D department, running inside one platform.</h1>
+<p class="lede">We built this to onboard, train and promote our own people at Peterman Brothers on the way past $100M. Now it runs your company: role based tracks, live coach led classes, career maps by tier, and training prescribed straight off your numbers.</p>
+<div class="btn-row">
+<a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3KIBhja7t2q7o0VAFUAdRraAuTdai4gCNXGuXQUDwFY0c7RBIhTDw6lv-2hqluCo27wOx4wcfD">Book a discovery call</a>
+<a class="btn btn-ghost" href="#platform">See what's inside</a>
 </div>
-<div class="trust">
-<span><svg class="i" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z" /></svg> Company-provisioned accounts</span>
-<span><svg class="i" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" /><path d="M3 9h18M8 3v4M16 3v4" /></svg> Optional Google &amp; Outlook sync</span>
-<span><svg class="i" viewBox="0 0 24 24"><path d="M4 19V5m0 14h16" /><path d="M8 15l4-5 3 3 4-6" /></svg> ServiceTitan KPI pulls</span>
-</div>
-</div>
-<div class="reveal" style="--rd:.12s">
-<div class="mock">
-<div class="mock-bar"><i></i><i></i><i></i><em>app.cstgtraining.com</em></div>
-<div class="mock-body">
-<div class="mock-h"><b>Team cockpit — Service</b><span>This week</span></div>
-<div class="stats">
-<div class="stat"><u>Classes done</u><b>38</b></div>
-<div class="stat"><u>Skills verified</u><b>17</b></div>
-<div class="stat"><u>Avg. ticket</u><b>+12%</b></div>
-</div>
-<div class="rows">
-<div class="row"><span class="av">MR</span><span class="who"><b>Marcus Reed</b><span>Service · Tech II</span></span><span class="bar"><i style="--w:78%;background:var(--service)"></i></span><span class="tag" style="background:#ecfdf5;color:var(--service)">Verified</span></div>
-<div class="row"><span class="av">TJ</span><span class="who"><b>Tasha Ijeoma</b><span>Sales · Comfort advisor</span></span><span class="bar"><i style="--w:54%;background:var(--sales)"></i></span><span class="tag" style="background:#fff7ed;color:var(--sales)">Practiced</span></div>
-<div class="row"><span class="av">DP</span><span class="who"><b>Dev Patel</b><span>Install · Lead</span></span><span class="bar"><i style="--w:32%;background:var(--install)"></i></span><span class="tag" style="background:#fef2f2;color:var(--install)">Learned</span></div>
+<div class="hero-note">
+<span>Built for HVAC, plumbing and electrical</span>
+<span>ServiceTitan connected</span>
+<span>Available by membership</span>
 </div>
 </div>
+
+<div class="ledger" data-seq aria-label="Example skill record for a service technician: three skills at Verified, Practiced and Learned.">
+<div class="ledger-top">
+<strong>Marcus Reed</strong>
+<span>Service · Tech II</span>
+</div>
+<div class="skill">
+<div class="skill-name">Diagnostic walkthrough at the equipment</div>
+<div class="rail">
+<i class="step done"></i><i class="step done"></i><i class="step done"></i>
+<span class="stage v">Verified</span>
+</div>
+</div>
+<div class="skill">
+<div class="skill-name">Presenting options without pressure</div>
+<div class="rail">
+<i class="step done"></i><i class="step on"></i><i class="step"></i>
+<span class="stage">Practiced</span>
+</div>
+</div>
+<div class="skill">
+<div class="skill-name">Handling the price objection</div>
+<div class="rail">
+<i class="step on"></i><i class="step"></i><i class="step"></i>
+<span class="stage">Learned</span>
+</div>
+</div>
+<div class="ledger-foot">Verified by Coach Dana on a ride along, March 12. Average ticket up 14% since.</div>
+</div>
+</div>
+</section>
+
+<!-- ============ PLATFORM ============ -->
+<section class="section dark" id="platform">
+<div class="wrap" data-motion>
+<h2>Everything a trade company needs to build its people. Already built.</h2>
+<p class="lede" style="margin-top:18px">You do not need to hire a training director, write a curriculum and buy an LMS. It is all here, tested inside a real contracting business, ready to plug into yours.</p>
+<div class="tiles">
+<div class="tile">
+<div class="tile-head"><div class="tile-tag">Curriculum</div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 5h7v15H4zM13 5h7v15h-7z"></path><path d="M4 9h7M13 9h7"></path></svg></div>
+<h3>Role based training tracks</h3>
+<p>Over 200 classes across Service, Sales, Install, Office Staff and Leadership. Every lesson carries its own video, materials and quiz.</p>
+</div>
+<div class="tile">
+<div class="tile-head"><div class="tile-tag">Live</div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="3.2"></circle><path d="M5.5 5.5a9 9 0 0 0 0 13M18.5 5.5a9 9 0 0 1 0 13"></path></svg></div>
+<h3>Weekly coach led classes</h3>
+<p>Your team trains alongside other top performing companies, with enrollment and attendance tracked automatically.</p>
+</div>
+<div class="tile">
+<div class="tile-head"><div class="tile-tag">Career</div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20h4v-6H4zM10 20h4V9h-4zM16 20h4V4h-4z"></path></svg></div>
+<h3>Career maps and promotion readiness</h3>
+<p>Every person sees exactly what stands between them and the next role, and how close they are to it today.</p>
+</div>
+<div class="tile">
+<div class="tile-head"><div class="tile-tag">Numbers</div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 17l5-6 4 3 4-6 5 4"></path><path d="M3 21h18"></path></svg></div>
+<h3>KPIs pulled from ServiceTitan</h3>
+<p>Average ticket, conversion, membership sales and turnovers by tech, team and company. No spreadsheets, no manual entry.</p>
+</div>
+<div class="tile">
+<div class="tile-head"><div class="tile-tag">Coaching</div><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="9" cy="8" r="3"></circle><path d="M3.5 20c.6-3.4 2.8-5 5.5-5s4.9 1.6 5.5 5"></path><path d="M16.5 7.5h4M18.5 5.5v4"></path></svg></div>
+<h3>One on one coaching sessions</h3>
+<p>Structured coaching with a career snapshot in front of you, so managers walk in knowing what to work on instead of guessing.</p>
 </div>
 </div>
 </div>
 </section>
 
-<section class="band alt" id="platform">
-<div class="wrap">
-<div class="shead reveal">
-<p class="eyebrow">The platform</p>
-<h2>Everything a trade company needs to build its people.</h2>
-<p>One system for the curriculum, the live coaching, the skills and the numbers — so growth stops being a hope and starts being a plan you can see.</p>
+<!-- ============ ROLE DASHBOARDS ============ -->
+<section class="section section-tight dark">
+<div class="wrap"><hr class="rule" style="background:rgba(255,255,255,.12);margin-bottom:56px"></div>
+<div class="wrap" data-motion data-stagger="80">
+<h2>Four dashboards. Each one answers a single question.</h2>
+<div class="roles">
+<div class="role"><h3>Technician</h3><p>What do I need to do next to get promoted?</p></div>
+<div class="role"><h3>Manager</h3><p>Who on my team is ready, and who is stuck?</p></div>
+<div class="role"><h3>Coach</h3><p>What should this coaching session be about?</p></div>
+<div class="role"><h3>Owner</h3><p>Is the training moving the numbers?</p></div>
 </div>
-<div class="fgrid">
-<div class="fcard reveal" style="--c:var(--service)">
-<div class="fico"><svg class="i" viewBox="0 0 24 24"><path d="M4 5h7a2 2 0 012 2v12a2 2 0 00-2-2H4z" /><path d="M20 5h-7a2 2 0 00-2 2v12a2 2 0 012-2h7z" /></svg></div>
-<h3>Role-based learning tracks</h3>
-<p>A 200-class curriculum across five career paths, with lessons that carry their own materials, videos and quizzes.</p>
-<div class="chips"><span class="chip"><i style="--cc:var(--service)"></i>Service</span><span class="chip"><i style="--cc:var(--sales)"></i>Sales</span><span class="chip"><i style="--cc:var(--office)"></i>Office Staff</span><span class="chip"><i style="--cc:var(--install)"></i>Install</span><span class="chip"><i style="--cc:var(--leadership)"></i>Leadership</span></div>
 </div>
-<div class="fcard reveal" style="--c:var(--sales);--rd:.06s">
-<div class="fico"><svg class="i" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" /><path d="M3 9h18M8 3v4M16 3v4" /><path d="M8 14h5" /></svg></div>
-<h3>Live training events</h3>
-<p>Coach-led cohort sessions on a shared events calendar, with Zoom join links, enrollment and attendance tracking.</p>
+</section>
+
+<!-- ============ CAREER PATHS ============ -->
+<section class="section" id="paths">
+<div class="wrap" data-motion>
+<h2>A progression path for every role, in the field and in the office.</h2>
+<p class="lede" style="margin-top:18px">Every role gets tiers. Every tier gets a number attached to it. So when someone asks what it takes to reach the next level, the answer is on a screen.</p>
+<div class="chips">
+<span class="chip"><i style="background:var(--cat-service)"></i>Service Technician</span>
+<span class="chip"><i style="background:var(--cat-service)"></i>Maintenance Technician</span>
+<span class="chip"><i style="background:var(--cat-install)"></i>Install</span>
+<span class="chip"><i style="background:var(--cat-sales)"></i>Sales Advisor</span>
+<span class="chip"><i style="background:var(--cat-office)"></i>Office and CSR</span>
+<span class="chip"><i style="background:var(--cat-lead)"></i>Leadership</span>
 </div>
-<div class="fcard reveal" style="--c:var(--leadership);--rd:.12s">
-<div class="fico"><svg class="i" viewBox="0 0 24 24"><path d="M12 3l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 8.7l5.4-.8z" /></svg></div>
-<h3>Skill progression</h3>
-<p>Every class maps to a communication skill. Skills advance learned → practiced → verified, with reviewer sign-off at the last step.</p>
 </div>
-<div class="fcard reveal" style="--c:var(--office)">
-<div class="fico"><svg class="i" viewBox="0 0 24 24"><path d="M4 19V5m0 14h16" /><path d="M8 15l4-5 3 3 4-6" /></svg></div>
-<h3>KPI tracking &amp; goals</h3>
-<p>Operational KPIs per technician, team and company, company goal matrices, and automatic pulls from ServiceTitan.</p>
+
+<!-- V1 -->
+<div class="wrap vrow" data-motion data-stagger="90">
+<div class="vrow-head">
+<span class="vrow-tag">Career mapping targets</span>
+<h3>Set the bar once, per trade and per role.</h3>
+<p>Tier targets for HVAC, plumbing and electrical, loaded by CSTG and editable to your market.</p>
+<p class="vrow-meta">Company Settings → Career mapping. Example data.</p>
 </div>
-<div class="fcard reveal" style="--c:var(--install);--rd:.06s">
-<div class="fico"><svg class="i" viewBox="0 0 24 24"><path d="M8 21h8" /><path d="M9 4h6v5a3 3 0 01-6 0z" /><path d="M12 12v9" /><path d="M5 4h2v3a3 3 0 01-2 2.8zM19 4h-2v3a3 3 0 002 2.8z" /></svg></div>
-<h3>1:1 coaching</h3>
-<p>Structured coaching sessions with career snapshots and AI-assisted coaching reports that give leaders a place to start.</p>
+<div class="vig v1" data-seq role="img" aria-label="Company Settings screen: tier targets for each KPI are typed into the HVAC and plumbing matrices, then saved.">
+<div class="vig-bar"><i></i><i></i><i></i><img src="assets/cstg-arrow.png" alt="" width="11" height="11"><span>app.cstgtraining.com · Company Settings</span></div>
+<div class="vig-screen">
+<div class="vs-h">
+<div class="v1-tabs">
+<b class="on hv">HVAC</b>
+<b class="pl">Plumbing<i class="wdot"></i></b>
+<b>Electrical</b>
 </div>
-<div class="fcard reveal" style="--c:var(--blue);--rd:.12s">
-<div class="fico"><svg class="i" viewBox="0 0 24 24"><path d="M3 4h18v13H3z" /><path d="M3 9h18M9 21h6M12 17v4" /><path d="M7 13h3M14 12h3" /></svg></div>
-<h3>Dashboards for every role</h3>
-<p>Students see their growth path, managers get a team cockpit, and owners see company-wide progress in one view.</p>
+<span class="tinybtn">Save targets<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"></path></svg></span>
+</div>
+<div class="v1-rev hide-s">
+<span>Revenue and revenue goal</span>
+<div class="v1-in">$4,120,000</div>
+<div class="v1-in">$5,000,000</div>
+</div>
+<table>
+<thead>
+<tr><th rowspan="2" style="width:26%">Target KPI</th><th class="grp" colspan="3">Service</th><th class="grp g2 hide-s" colspan="3">Sales</th><th class="grp hide-s" colspan="3">Install</th></tr>
+<tr><th class="tc">Entry</th><th class="tc">Tier 2</th><th class="tc">Master</th><th class="tc hide-s">Entry</th><th class="tc hide-s">Tier 2</th><th class="tc hide-s">Master</th><th class="tc hide-s">Entry</th><th class="tc hide-s">Tier 2</th><th class="tc hide-s">Master</th></tr>
+</thead>
+<tbody>
+<tr><td>Close rate</td>
+<td class="c f" style="--d:.25s"><span class="cv">32%</span><i class="cr"></i></td>
+<td class="c f" style="--d:.7s"><span class="cv">38%</span><i class="cr"></i></td>
+<td class="c f" style="--d:1.15s"><span class="cv">45%</span><i class="cr"></i></td>
+<td class="c hide-s">44%</td><td class="c hide-s">52%</td><td class="c hide-s">60%</td>
+<td class="c dash hide-s">—</td><td class="c dash hide-s">—</td><td class="c dash hide-s">—</td></tr>
+<tr><td>Avg ticket</td>
+<td class="c f" style="--d:1.7s"><span class="cv">$980</span><i class="cr"></i></td>
+<td class="c f" style="--d:2.15s"><span class="cv">$1,240</span><i class="cr"></i></td>
+<td class="c">$1,600</td>
+<td class="c hide-s">$2,400</td><td class="c hide-s">$3,100</td><td class="c hide-s">$4,000</td>
+<td class="c hide-s">$6,200</td><td class="c hide-s">$7,400</td><td class="c hide-s">$9,000</td></tr>
+<tr class="hide-s"><td>Options presented</td>
+<td class="c">2</td><td class="c">3</td><td class="c">4</td>
+<td class="c hide-s">3</td><td class="c hide-s">4</td><td class="c hide-s">5</td>
+<td class="c dash hide-s">—</td><td class="c dash hide-s">—</td><td class="c dash hide-s">—</td></tr>
+<tr><td>Memberships sold</td>
+<td class="c f" style="--d:4.15s"><span class="cv">6</span><i class="cr"></i></td>
+<td class="c">9</td><td class="c">14</td>
+<td class="c dash hide-s">—</td><td class="c dash hide-s">—</td><td class="c dash hide-s">—</td>
+<td class="c hide-s">2</td><td class="c hide-s">3</td><td class="c hide-s">5</td></tr>
+<tr><td>Turnovers</td>
+<td class="c f" style="--d:4.6s"><span class="cv">8</span><i class="cr"></i></td>
+<td class="c">12</td><td class="c">18</td>
+<td class="c dash hide-s">—</td><td class="c dash hide-s">—</td><td class="c dash hide-s">—</td>
+<td class="c dash hide-s">—</td><td class="c dash hide-s">—</td><td class="c dash hide-s">—</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<!-- V2 -->
+<div class="wrap vrow" data-motion data-stagger="90">
+<div class="vrow-head">
+<span class="vrow-tag">Team map</span>
+<h3>See the whole team against their tier.</h3>
+<p>Who is below target, who has not had a ride along, and where pay and performance disagree.</p>
+<p class="vrow-meta">Teams → Team map. Names and numbers are examples.</p>
+</div>
+<div class="vig v2" data-seq role="img" aria-label="Team map screen: a roster of six technicians against tier targets, with one person's detail panel opening to show KPIs, ride-alongs and skill stages.">
+<div class="vig-bar"><i></i><i></i><i></i><img src="assets/cstg-arrow.png" alt="" width="11" height="11"><span>app.cstgtraining.com · Teams</span></div>
+<div class="vig-screen">
+<div class="vs-h">
+<div><div class="vs-title">Service · North</div><div class="vs-sub">6 technicians · tier targets applied</div></div>
+</div>
+<div class="v2-counters">
+<div class="a"><span>Needs attention</span><b>3</b></div>
+<div class="w"><span>Below target</span><b>2</b></div>
+<div class="w hide-s"><span>No ride-along</span><b>1</b></div>
+<div class="g"><span>Fully on target</span><b>6</b></div>
+</div>
+<table>
+<thead><tr><th style="width:31%">Name</th><th style="width:16%">Tier</th><th>Close rate</th><th class="hide-s">Avg ticket</th><th class="hide-s">Memberships</th></tr></thead>
+<tbody>
+<tr class="hl" style="--d:.15s"><td>Marcus Reed</td><td><span class="tier t2">Tier 2</span></td><td class="num down">34% ▾</td><td class="num down hide-s">$1,180 ▾</td><td class="num up hide-s">7 ▴</td></tr>
+<tr style="--d:.25s"><td>Tasha Ijeoma</td><td><span class="tier tm">Master</span></td><td class="num up">47% ▴</td><td class="num up hide-s">$1,720 ▴</td><td class="num up hide-s">12 ▴</td></tr>
+<tr style="--d:.35s"><td>Dev Patel</td><td><span class="tier">Entry</span></td><td class="num down">26% ▾</td><td class="num down hide-s">$760 ▾</td><td class="num down hide-s">3 ▾</td></tr>
+<tr style="--d:.45s"><td>Ana Lucero</td><td><span class="tier t2">Tier 2</span></td><td class="num up">41% ▴</td><td class="num up hide-s">$1,350 ▴</td><td class="num up hide-s">9 ▴</td></tr>
+<tr class="hide-s" style="--d:.55s"><td>Jordan Kim</td><td><span class="tier">Entry</span></td><td class="num down">31% ▾</td><td class="num up hide-s">$910 ▴</td><td class="num up hide-s">5 ▴</td></tr>
+<tr class="hide-s" style="--d:.65s"><td>Ray Whitfield</td><td><span class="tier tm">Master</span></td><td class="num up">44% ▴</td><td class="num up hide-s">$1,610 ▴</td><td class="num up hide-s">11 ▴</td></tr>
+</tbody>
+</table>
+<div class="v2-panel">
+<div style="--i:0"><h4>Marcus Reed</h4><div class="vs-sub">Service · Tech II</div></div>
+<div class="v2-card" style="--i:1">
+<b>Last 90 days</b>
+<div class="v2-kpi"><span>Close rate</span><span class="down">34% / 38%</span></div>
+<div class="v2-kpi"><span>Avg ticket</span><span class="down">$1,180 / $1,240</span></div>
+<div class="v2-kpi"><span>Memberships</span><span class="up">7 / 6</span></div>
+</div>
+<div class="v2-card" style="--i:2">
+<b>Ride-alongs</b>
+<div class="v2-kpi"><span>Mar 12 · Coach Dana</span></div>
+<div class="v2-kpi"><span class="up">Verified: Diagnostic walkthrough</span></div>
+</div>
+<div class="v2-place" style="--i:3"><span>Placed at <b>Tier 2</b></span><span class="vs-sub">Target: Master</span></div>
+<div class="minirail" style="--i:4">
+<div><div class="bars"><i class="done"></i><i class="done"></i><i class="done"></i></div><span class="up">Verified</span></div>
+<div><div class="bars"><i class="done"></i><i class="on"></i><i></i></div><span>Practiced</span></div>
+<div><div class="bars"><i class="on"></i><i></i><i></i></div><span>Learned</span></div>
+</div>
+</div>
+<div class="cursor" aria-hidden="true"><svg width="12" height="17" viewBox="0 0 12 17"><path d="M0 0l11 7-4.6.6L9 15.4l-2 .8-2.6-7.7L0 11.6z" fill="#111820" stroke="#fff" stroke-width=".8"></path></svg></div>
+</div>
+</div>
+</div>
+
+<!-- V3 -->
+<div class="wrap vrow" data-motion data-stagger="90">
+<div class="vrow-head">
+<span class="vrow-tag">Performance and KPI report</span>
+<h3>The platform prescribes the training.</h3>
+<p>A technician short on conversion gets the exact classes that close the gap, assigned to their path.</p>
+<p class="vrow-meta">Reports → Performance. Example data.</p>
+</div>
+<div class="vig v3" data-seq role="img" aria-label="Performance report screen: four KPI tiles count up against their targets, conversion rate lands below target and two prescribed sales classes are assigned to the technician's path.">
+<div class="vig-bar"><i></i><i></i><i></i><img src="assets/cstg-arrow.png" alt="" width="11" height="11"><span>app.cstgtraining.com · Reports</span></div>
+<div class="vig-screen">
+<div class="vs-h">
+<div><div class="vs-title">Service · North · last 30 days</div></div>
+<span class="vs-sub">vs tier target</span>
+</div>
+<div class="v3-strip">
+<div class="v3-tile"><span>Avg ticket</span><b data-count="1240" data-group="1" data-dur="1200">$1,240</b><div class="v3-bar" style="--w:82%;--t:72%"><i style="--d:.3s"></i><u></u></div></div>
+<div class="v3-tile miss"><span>Conversion rate</span><b data-count="31" data-dur="1200" data-delay="150">31%</b><div class="v3-bar" style="--w:62%;--t:76%"><i style="--d:.45s"></i><u></u></div><span class="v3-tag">Below target · 38%</span></div>
+<div class="v3-tile hide-s"><span>Turnovers</span><b data-count="12" data-dur="1100" data-delay="300">12</b><div class="v3-bar" style="--w:74%;--t:66%"><i style="--d:.6s"></i><u></u></div></div>
+<div class="v3-tile hide-s"><span>Memberships sold</span><b data-count="9" data-dur="1100" data-delay="450">9</b><div class="v3-bar" style="--w:88%;--t:70%"><i style="--d:.75s"></i><u></u></div></div>
+</div>
+<table>
+<thead><tr><th style="width:30%">Technician</th><th>Avg ticket</th><th>Conversion</th><th>Turnovers</th><th class="hide-s">Memberships</th></tr></thead>
+<tbody>
+<tr><td>Marcus Reed</td><td class="num">$1,180</td><td class="num">36%</td><td class="num">11</td><td class="num hide-s">7</td></tr>
+<tr class="hl"><td>Tasha Ijeoma</td><td class="num">$1,720</td><td class="num">31%</td><td class="num">14</td><td class="num hide-s">12</td></tr>
+<tr class="hide-s"><td>Dev Patel</td><td class="num">$760</td><td class="num">24%</td><td class="num">8</td><td class="num hide-s">3</td></tr>
+</tbody>
+</table>
+<div class="v3-pres">
+<b>Prescribed classes · Tasha Ijeoma</b>
+<div class="v3-cls" style="--i:0"><i></i>Sales 204 · Presenting options without pressure<em>Assigned to path<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1E7A5A" stroke-width="3.4" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"></path></svg></em></div>
+<div class="v3-cls" style="--i:1"><i></i>Sales 211 · Handling the price objection<em>Assigned to path<svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#1E7A5A" stroke-width="3.4" aria-hidden="true"><path d="M4 12.5l5.5 5.5L20 7"></path></svg></em></div>
+</div>
+<div class="v3-foot">Recommended intervention: ride-along with Coach Dana this week</div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="band" id="calendar">
-<div class="wrap cal-in">
-<div class="reveal">
-<p class="eyebrow">Calendar sync</p>
-<h2 style="font-size:clamp(26px,3.2vw,38px);margin-top:14px;letter-spacing:-.035em">Your training schedule, on your own calendar.</h2>
-<p style="margin-top:16px;font-size:16.5px">Connect Outlook or Google Calendar with one click. The sessions you're enrolled in or invited to show up on the calendar you already live in — automatically, and they stay correct. Reschedule a cohort, rename a class or cancel a session in CSTG and the change lands on everyone's calendar within seconds.</p>
-<div class="steps">
-<div class="step"><b>1</b><span><u>Connect</u>Open Settings → Calendar and pick Microsoft or Google.</span></div>
-<div class="step"><b>2</b><span><u>Approve on Microsoft's or Google's page</u>You grant access on their consent screen, never inside CSTG.</span></div>
-<div class="step"><b>3</b><span><u>Your sessions appear</u>Enrolled events populate immediately and keep syncing after that.</span></div>
+<!-- ============ VERIFICATION THESIS ============ -->
+<section class="section white">
+<div class="wrap thesis-grid" data-motion data-stagger="100">
+<div>
+<h2>A finished course never fixed a bad call.</h2>
+<p class="lede">Most platforms count completions. Completions do not change what a tech says in a customer's living room. CSTG tracks whether the person can actually do it, in the field, with a coach watching.</p>
+<p class="lede">Every class maps to a skill, and every skill moves through three stages before it counts.</p>
 </div>
-<div class="tbox">
-<h4><svg class="i" viewBox="0 0 24 24"><path d="M12 3l7 3v6c0 4.2-2.9 7.6-7 9-4.1-1.4-7-4.8-7-9V6l7-3z" /><path d="M9 12l2 2 4-4" /></svg> What calendar access is used for</h4>
-<ul class="tlist">
-<li><svg class="i" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" /></svg><span>CSTG only creates, updates and removes the training events it puts on your calendar for you.</span></li>
-<li><svg class="i no" viewBox="0 0 24 24"><path d="M18 6L6 18M6 6l12 12" /></svg><span>It does not read your other events, contacts or email.</span></li>
-<li><svg class="i" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" /></svg><span>You can disconnect anytime from Settings and the events it added are cleaned up.</span></li>
-<li><svg class="i" viewBox="0 0 24 24"><path d="M20 6L9 17l-5-5" /></svg><span>You can also revoke access from your Microsoft or Google account at any time.</span></li>
+<div class="stages">
+<div class="stage-row"><b><i></i>Learned</b><p>The class is done and the quiz is passed. The person knows what good looks like.</p></div>
+<div class="stage-row"><b><i></i>Practiced</b><p>They have run it in a role play or a live session. It has left the classroom.</p></div>
+<div class="stage-row"><b><i></i>Verified</b><p>A coach or manager watched them do it on a real call and signed off. Only then does it hit the record.</p></div>
+</div>
+</div>
+</section>
+
+<!-- ============ RESULTS ============ -->
+<section class="section" id="results">
+<div class="wrap" data-motion>
+<h2>Proven training. Measurable growth.</h2>
+<p class="lede" style="margin-top:16px">Results from CSTG training and coaching clients, 2024 to 2025.</p>
+<div class="res-group">
+<h3>Service calls</h3>
+<div class="res-row" data-seq>
+<div class="res"><div class="num" data-count="65">65%</div><div class="lbl">Increase in average ticket</div></div>
+<div class="res"><div class="num" data-count="39" data-delay="120">39%</div><div class="lbl">Increase in conversion rate</div></div>
+<div class="res"><div class="num" data-count="32" data-delay="240">32%</div><div class="lbl">Increase in turnovers</div></div>
+</div>
+</div>
+<div class="res-group">
+<h3>Maintenance calls</h3>
+<div class="res-row" data-seq>
+<div class="res"><div class="num" data-count="112">112%</div><div class="lbl">Increase in average ticket</div></div>
+<div class="res"><div class="num" data-count="61" data-delay="120">61%</div><div class="lbl">Increase in conversion rate</div></div>
+<div class="res"><div class="num" data-count="144" data-delay="240">144%</div><div class="lbl">Increase in turnovers</div></div>
+</div>
+</div>
+<p class="res-note">Averages across participating companies. Your analysis sets the baseline we measure against.</p>
+</div>
+</section>
+
+<!-- ============ CALENDAR SYNC ============ -->
+<section class="section dark" id="calendar">
+<div class="wrap" data-motion data-stagger="90">
+<h2>Your training schedule, on your own calendar.</h2>
+<p class="lede" style="margin-top:18px">Connect Outlook or Google Calendar with one click. The sessions you're enrolled in or invited to show up on the calendar you already live in, automatically, and they stay correct. Reschedule a cohort, rename a class or cancel a session in CSTG and the change lands on everyone's calendar within seconds.</p>
+<div class="cal-grid">
+<div>
+<div class="cal-steps">
+<div class="cal-step"><b>01</b><div><h3>Connect</h3><p>Open Settings → Calendar and pick Microsoft or Google.</p></div></div>
+<div class="cal-step"><b>02</b><div><h3>Approve on Microsoft's or Google's page</h3><p>You grant access on their consent screen, never inside CSTG.</p></div></div>
+<div class="cal-step"><b>03</b><div><h3>Your sessions appear</h3><p>Enrolled events populate immediately and keep syncing after that.</p></div></div>
+</div>
+<div class="transparency">
+<h3><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4FCB9B" stroke-width="1.8" aria-hidden="true"><path d="M12 3l7 3v6c0 4-3 7-7 9-4-2-7-5-7-9V6z"></path></svg>What calendar access is used for</h3>
+<ul>
+<li>CSTG only creates, updates and removes the training events it puts on your calendar for you.</li>
+<li>It does not read your other events, contacts or email.</li>
+<li>You can disconnect anytime from Settings and the events it added are cleaned up.</li>
+<li>You can also revoke access from your Microsoft or Google account at any time.</li>
 </ul>
 </div>
 </div>
-<div class="reveal" style="--rd:.1s">
-<div class="calmock">
-<div class="cal-top"><svg class="i" style="color:var(--s400)" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" /><path d="M3 9h18M8 3v4M16 3v4" /></svg><b>My calendar · March 10–14</b><span class="sp"><span class="pillstat ok"><span class="dot"></span>Syncing</span><span class="pillstat warn">Needs reconnect</span></span></div>
-<div class="cal-grid"><span class="hd"></span><span class="hd">Mon</span><span class="hd today">Tue</span><span class="hd">Wed</span><span class="hd">Thu</span><span class="hd">Fri</span></div>
-<div class="cal-body">
-<div class="hours"><span>8a</span><span>9a</span><span>10a</span><span>11a</span><span>12p</span><span>1p</span></div>
-<div class="col"><div class="ev" style="--d:.15s;top:6px;height:74px;background:var(--service)"><b>Comm Skills 201</b><span>8:00 · Coach Dana · Zoom</span></div></div>
-<div class="col"><div class="ev" style="--d:.35s;top:60px;height:64px;background:var(--sales)"><b>Objection handling</b><span>9:00 · Sales cohort</span></div><div class="ev" style="--d:.75s;top:220px;height:58px;background:var(--office)"><b>CSR call review</b><span>12:00 · Office Staff</span></div></div>
-<div class="col"><div class="ev" style="--d:.5s;top:114px;height:80px;background:var(--leadership)"><b>Leadership lab</b><span>10:00 · Cohort 4</span></div></div>
-<div class="col"><div class="ev" style="--d:.62s;top:22px;height:60px;background:var(--install)"><b>Install ride-along</b><span>8:15 · Field</span></div><div class="ev" style="--d:.9s;top:168px;height:52px;background:var(--service)"><b>1:1 with Ray</b><span>11:00 · Coaching</span></div></div>
-<div class="col"><div class="ev" style="--d:.82s;top:100px;height:70px;background:var(--sales)"><b>Pricing practice</b><span>9:45 · Sales</span></div></div>
+<div class="mockcal">
+<div class="mockcal-top">
+<b>Week of March 10</b>
+<div class="pills"><span class="pill ok"><i></i>Syncing</span><span class="pill warn"><i></i>Needs reconnect</span></div>
 </div>
-<div class="cal-foot">
-<span class="lg"><i style="background:var(--service)"></i>Service</span>
-<span class="lg"><i style="background:var(--sales)"></i>Sales</span>
-<span class="lg"><i style="background:var(--leadership)"></i>Leadership</span>
-<span class="lg"><i style="background:var(--office)"></i>Office</span>
-<span class="lg"><i style="background:var(--install)"></i>Install</span>
-<span class="src"><svg class="i" style="width:14px;height:14px" viewBox="0 0 24 24"><path d="M21 12a9 9 0 11-3-6.7" /><path d="M21 4v5h-5" /></svg>Added by CSTG</span>
+<div class="mockcal-week">
+<div class="mockcal-day"><span>Mon</span>
+<div class="ev service"><b>Service 210 · Live</b><span>9:00 · Coach Dana</span></div>
+</div>
+<div class="mockcal-day"><span>Tue</span>
+<div class="ev sales"><b>Sales 204</b><span>13:00 · Cohort B</span></div>
+<div class="ev lead"><b>1-on-1</b><span>15:30 · Manager</span></div>
+</div>
+<div class="mockcal-day"><span>Wed</span>
+<div class="ev install"><b>Install lab</b><span>8:00 · Shop</span></div>
+</div>
+<div class="mockcal-day"><span>Thu</span>
+<div class="ev service"><b>Ride-along</b><span>All day · Dana</span></div>
+<div class="ev"><b>CSR huddle</b><span>16:00 · Office</span></div>
+</div>
+<div class="mockcal-day"><span>Fri</span>
+<div class="ev sales"><b>Sales 211</b><span>11:00 · Cohort B</span></div>
+</div>
+</div>
+<div class="mockcal-foot">
+<span class="dotlbl"><i style="background:var(--cat-service)"></i>Service</span>
+<span class="dotlbl"><i style="background:var(--cat-sales)"></i>Sales</span>
+<span class="dotlbl"><i style="background:var(--cat-install)"></i>Install</span>
+<span class="dotlbl"><i style="background:var(--cat-lead)"></i>Leadership</span>
+<span class="dotlbl"><i style="background:var(--cat-office)"></i>Office</span>
 </div>
 </div>
 </div>
 </div>
 </section>
 
-<section class="close">
-<div class="wrap reveal">
-<p class="eyebrow">Built for the trades</p>
-<h2 style="margin-top:14px">Grow the people who carry your name into the house.</h2>
-<p>Onboarding, upskilling and coaching for HVAC, plumbing and electrical companies — available to companies by subscription.</p>
-<div class="actions">
-<a class="btn btn-primary" href="https://app.cstgtraining.com/login">Get started<svg class="i" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" /></svg></a>
-<a class="btn btn-ghost" href="mailto:danny@cantstopthegrowth.com">Talk to us</a>
+<!-- ============ HOW A COMPANY STARTS ============ -->
+<section class="section white" id="start">
+<div class="wrap" data-motion>
+<h2>How a company starts.</h2>
+<p class="lede" style="margin-top:18px">We do not drop a login on your team and wish them luck. Every account starts with a look at your business, so the training is pointed at something that actually needs fixing.</p>
+<div class="path">
+<div class="step-card">
+<div class="step-num">Step one</div>
+<h3>Discovery call</h3>
+<p>Thirty minutes on your size, your roles, your numbers and what is breaking. If we are not the right fit we will say so.</p>
+</div>
+<div class="step-card">
+<div class="step-num">Step two</div>
+<h3>Business analysis</h3>
+<p>Eight weeks with a CSTG coach: CRM health, margins and marketing, KPI and career map setup, team mapping. Your team is training in the platform the whole time.</p>
+</div>
+<div class="step-card">
+<div class="step-num">Step three</div>
+<h3>Membership</h3>
+<p>Choose the level that fits where you are going. Priced per seat, so it scales with your headcount instead of punishing you for growing.</p>
+</div>
+</div>
+<div class="btn-row">
+<a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3KIBhja7t2q7o0VAFUAdRraAuTdai4gCNXGuXQUDwFY0c7RBIhTDw6lv-2hqluCo27wOx4wcfD">Book a discovery call</a>
+<a class="btn btn-outline-dark" href="https://cantstopthegrowth.com/learning-development/">Compare membership levels</a>
 </div>
 </div>
 </section>
+
+<!-- ============ FINAL CTA ============ -->
+<section class="final">
+<img class="final-mark" src="assets/cstg-arrow-white.png" alt="" aria-hidden="true" width="720" height="708">
+<div class="wrap" data-motion data-stagger="80">
+<h2>Stop guessing at training. Start growing with CSTG.</h2>
+<p>You do not need to build a training department. You need access to one that is already proven, already staffed and already producing numbers. Let's design your company's plan.</p>
+<div class="btn-row">
+<a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3KIBhja7t2q7o0VAFUAdRraAuTdai4gCNXGuXQUDwFY0c7RBIhTDw6lv-2hqluCo27wOx4wcfD">Book a discovery call</a>
+<a class="btn btn-ghost" href="https://app.cstgtraining.com/login">Member login</a>
+</div>
+</div>
+</section>
+
 </main>
 
-<footer class="foot">
+<footer class="site-foot">
 <div class="wrap">
-<div class="foot-in">
-<a class="logo" href="#top"><span class="mark">C</span><b>Can't Stop The Growth</b></a>
-<nav class="foot-links">
+<div class="foot-top">
+<a class="mark" href="#top"><img src="assets/cstg-logo-white.png" alt="Can't Stop The Growth" height="120"></a>
+<div class="foot-links">
+<a href="https://cantstopthegrowth.com/learning-development/">Learning &amp; Development</a>
+<a href="https://cantstopthegrowth.com/about/">About</a>
 <a href="terms.html">Terms of Service</a>
 <a href="privacy.html">Privacy Policy</a>
 <a href="mailto:danny@cantstopthegrowth.com">Support</a>
-</nav>
 </div>
-<div class="foot-bottom">
-<span>© 2026 Can't Stop The Growth. All rights reserved.</span>
-<span>656 S. Graham Rd., Greenwood, IN 46143 · <a href="mailto:danny@cantstopthegrowth.com">danny@cantstopthegrowth.com</a></span>
+</div>
+<div class="foot-bot">
+Partners in learning, development and results.<br>
+© 2026 Can't Stop The Growth. All rights reserved. 656 S. Graham Rd., Greenwood, IN 46143 · <a href="mailto:danny@cantstopthegrowth.com">danny@cantstopthegrowth.com</a>
 </div>
 </div>
 </footer>
 
-<script>
-(function(){
-var t=document.getElementById('navToggle'),n=document.getElementById('nav'),h=document.getElementById('head');
-t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});
-n.addEventListener('click',function(e){if(e.target.tagName==='A'){n.classList.remove('open');t.setAttribute('aria-expanded','false');}});
-addEventListener('scroll',function(){h.classList.toggle('stuck',scrollY>8);},{passive:true});
-var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.15,rootMargin:'0px 0px -8% 0px'});
-document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
-})();
-</script>
+<script src="motion.js"></script>
 </body>
 </html>
