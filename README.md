@@ -88,9 +88,16 @@ reveal classes never fire — if you need a hard no-JS guarantee, add
   `terms.html` still use the original navy CSTG brand (`site.css`). They work and link
   correctly, but a reviewer sees two visual languages. Say the word and the legal pages
   get restyled onto `landing.css`.
-- Legal copy in `privacy.html` / `terms.html` still contains `[BRACKET]` placeholders
-  (registered entity name, jurisdiction, subprocessors, retention windows, liability
-  cap). **These must be resolved before publishing.**
+- Legal copy: every `[BRACKET]` placeholder was resolved on 2026-09-04 except the registered
+  **entity type** (`[ENTITY TYPE — e.g. LLC]`, once per page). Defaults chosen that deserve a
+  legal read: Indiana law / Johnson County venue, no arbitration clause, 12-month liability cap,
+  30-day post-termination export window, no uptime commitment.
+- **Apex redirects to www.** Vercel answers `cstgtraining.com` with a 308 to
+  `www.cstgtraining.com`. Microsoft's publisher-domain check does not follow redirects, so
+  either set the publisher domain to `www.cstgtraining.com` or make the apex the primary
+  domain in Vercel. Use the `www` URLs in the Google consent-screen fields as well.
+- `.well-known/microsoft-identity-association.json` lists ONE application id; every Azure app
+  registration that names this publisher domain (production AND staging) must be in the array.
 - No analytics, cookie banner, or forms are included — nothing on this page sets a
   cookie or collects data, which keeps the review surface small. Adding analytics means
   updating the privacy policy's technical-data section.
