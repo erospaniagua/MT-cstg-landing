@@ -15,6 +15,7 @@ cookie. Only external request: Google Fonts (Archivo + Inter).
 | `legal.css` | legal template only; load **after** `landing.css` |
 | `assets/` | brand images (see below) |
 | `.well-known/microsoft-identity-association.json` | Azure publisher-domain verification |
+| `vercel.json` | redirects: `/survey/:token` (assessment links from the previous app) → `https://st.cstgtraining.com/survey/:token`, permanent |
 | `docs/` | the Claude Design brief this page was built from |
 
 Install order in `<head>`: fonts → `landing.css` → `legal.css` (legal pages only).
@@ -26,7 +27,7 @@ Generated with ImageMagick from the two originals in `assets/source/` (never ser
 
 | File | Used for |
 |---|---|
-| `cstg-logo-white.png` (264×84, 3× of the 38px header height) | header and footer wordmark, `alt="Can't Stop The Growth"` |
+| `cstg-logo-white.png` (377×120, 3× of the 38px header height) | header and footer wordmark, `alt="Can't Stop The Growth"` |
 | `cstg-arrow.png` (900px) | hero watermark (7% opacity, fades in on load), vignette window icon |
 | `cstg-arrow-white.png` (720px) | watermark in the crimson final CTA |
 | `favicon.ico` (48/32/16), `apple-touch-icon.png` (180, ink background) | browser and home-screen icons |
