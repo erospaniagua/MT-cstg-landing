@@ -34,6 +34,7 @@ without login**, at the domain listed on the OAuth consent screen.
 | What | Where |
 |---|---|
 | Login / signup URL | `https://app.cstgtraining.com/login` — 3 `<a href>` in `index.html` |
+| Legacy (ST) app link — TEMPORARY | `https://st.cstgtraining.com/` — the "Legacy app" ghost button next to "Get started" in the header nav; remove once the old app's users have moved |
 | Support email | `danny@cantstopthegrowth.com` — footer + "Talk to us" CTA |
 | Address, © year | footer `.foot-bottom` |
 | Nav anchors | `#platform`, `#calendar` + `privacy.html`, `terms.html` |
